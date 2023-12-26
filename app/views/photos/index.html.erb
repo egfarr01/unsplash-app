@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1>Scary Views</h1>
+  <div class="photos-grid">
+    <% @photos.each do |photo| %>
+      <div class="photo">
+        <img src="<%= photo[:url] %>" alt="Spooky photo">
+        <a href="<%= photo[:credit_url] %>" class="photo-credit"><%= photo[:credit] %></a>
+      </div>
+    <% end %>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</body>
+</html>
